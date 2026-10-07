@@ -1,0 +1,15 @@
+import random
+import pyttsx3
+
+engine=pyttsx3.init()
+secret=random.randint(1,10)
+guess=int(input("Enter your number from 1 to 10"))
+if guess==secret:
+    print("Correct")
+    engine.say("Correct!You have guessed a correct number")
+else:
+    print("Wrong")
+    engine.say("Wrong!The number was " + str(secret))
+
+engine.runAndWait()
+
